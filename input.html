@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<input type="text" class="a" placeholder="名字">
+<input type="text" class="a" placeholder="age">
+<input type="text" class="a" placeholder="name">
+<button class="b">提交</button>
+</body>
+<script>
+    var a = document.getElementsByClassName('a');
+    var b = document.getElementsByClassName('b')[0];
+    console.log(a);
+    console.log(b);
+
+    b.onclick=function () {
+        for (var i=0;i<a.length;i++){
+            var c=a[i];
+            if(c.value==''){
+                c.placeholder='内容不能为空'
+            }
+        }
+    }
+</script>
+</html>
